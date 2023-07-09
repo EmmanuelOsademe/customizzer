@@ -1,5 +1,3 @@
-"use client"
-
 import CanvasModel from "@/canvas";
 import "./globals.css";
 

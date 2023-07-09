@@ -1,9 +1,11 @@
+"use client"
+
 import {useFrame} from "@react-three/fiber";
 import {easing} from "maath";
 import { useSnapshot } from "valtio";
 import state from "@/store";
-import { MutableRefObject, Ref, useRef } from "react";
-import { Euler, Group, Mesh } from "three";
+import { useRef } from "react";
+import { Euler, Group } from "three";
 
 interface Props {
     children: React.ReactNode

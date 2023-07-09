@@ -1,3 +1,5 @@
+"use client"
+
 import { easing } from "maath";
 import { RefObject, useRef } from "react";
 import { useFrame } from "@react-three/fiber";

@@ -1,4 +1,3 @@
-import { connectToMongoDB } from "@/db/mongo";
 import { Configuration, OpenAIApi } from "openai";
 
 const config = new Configuration({
@@ -11,7 +10,6 @@ export const POST = async (req: Request) => {
 
     try {
         const {prompt} = await req.json();
-        // await connectToMongoDB();
 
         const response = await openai.createImage({
             prompt,

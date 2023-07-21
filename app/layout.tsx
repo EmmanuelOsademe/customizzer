@@ -14,7 +14,7 @@ const RootLayout: React.FC<{children: React.ReactNode}> = ({children}) => {
                 <link rel="icon" type="image/x-icon" href="/emmysfav.png" />
             </head>
             <body>
-                <main className="app transition-all ease-in">
+                <main className="app transition-all ease-in flex ">
                     {children}
                     <CanvasModel />
                 </main>

@@ -4,12 +4,13 @@ import {AnimatePresence, motion} from "framer-motion";
 import {useSnapshot} from "valtio";
 import state from "@/store";
 import { download } from "@/assets";
-import { downloadCanvasToImage, reader } from "@/config/helpers";
+import { reader } from "@/config/helpers";
 import { EditorTabs, FilterTabs, DecalTypes } from "@/config/constants";
 import { fadeAnimation, slideAnimation } from "@/config/motion";
 import {AiPicker, ColorPicker, FilePicker, Tab, CustomButton} from "@/components";
 import { TabInterface } from "@/common.types";
 import { useRouter } from "next/navigation";
+import { downloadImage } from "@/utils";
 
 const Customizer: React.FC = () => {
     const snap = useSnapshot(state);
@@ -163,6 +164,7 @@ const Customizer: React.FC = () => {
                                 handleClick={() => handleActiveFilterTab(tab.name)}
                             />
                         ))}
+                        <Tab tab={{name: "download", icon: download}} handleClick={() => downloadImage("", "")}/>
                     </motion.div>
                 </>
             )}

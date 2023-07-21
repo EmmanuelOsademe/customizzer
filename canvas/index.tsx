@@ -7,7 +7,7 @@ import Shirt from "./Shirt";
 import Backdrop from "./Backdrop";
 
 const CanvasModel: React.FC = () => {
-
+    
     return (
         <Canvas
             shadows
